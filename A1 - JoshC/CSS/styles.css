@@ -1,0 +1,189 @@
+/* adjust the size of content accordingly to the size of the screen */
+* {
+	box-sizing: border-box;
+}
+
+/* next few are the default styling for common regular tags */
+h1 {
+	text-align: center;
+	font-size: 55px;
+	color: white;
+	font: monospace;
+	padding: 0px;
+}
+
+h2 {
+	color: white;
+	text-align: center;
+	font-size: 30px;
+	font: monospace; 
+}
+
+p {
+	text-align: left;
+	font-size: 25px;
+	color: black;
+	font: monospace;
+}
+
+a {
+	color: #0051FF;
+}
+
+/* code to style and keep the navigation bar at the top of the webpage */
+.topnav {
+	position: fixed;
+	top: 0;
+	margin: auto;
+	background-color: #0051FF;
+	color: white;
+	font-size: 25px;
+	text-align: right;
+	overflow: hidden;
+	justify-content: space-between;
+	width: 100%;
+	border: 3px solid #FFAE00;
+}
+
+.topnav a {
+	float: right;
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+/* changes the color of the selected navigation link */
+.topnav a:hover {
+	background-color: #FFAE00;
+	color: black;
+}
+
+/* code for the background image */
+body {
+	background-image: url("../images/background_image.png");
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+/* stying for the footer */
+footer {
+	background-color: #0051FF;
+	padding: 30px;
+	width: 100%;
+	height: 80px;
+	text-align: center;
+	border: 3px solid #FFAE00;
+	margin-top: auto;
+}
+
+footer p {
+	color: white;
+	font-size: 18px;
+	text-align: center;
+}
+
+/* code to allow two columns */
+.column {
+	float: left;
+	min-width: 50%;
+	padding: 15px;
+}
+
+/* For the cv link button */
+.cv {
+	margin: auto;
+	width: 28%;
+	border-radius: 25px;
+	padding: 15px;
+	border: 3px solid #FFAE00;
+	background-color: #FFAE00;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+}
+
+.cv a {
+	color: black;
+	text-align: center;
+	font-size: 35px;
+	padding: 10px 0px;
+	display: block;
+}
+
+/* Styling for where the main content will go */
+.content {
+	margin: auto;
+	width: 95%;
+	padding: 20px;
+	background-color: white;
+
+}
+/* next few are styles for parts where contact information is placed */
+.contact_image {
+	margin: auto;
+	background-color: white;
+	width: 100%;
+	height: 360px;
+}
+
+.contact_info {
+	padding: 2px 16px;
+	background-color: white;
+	text-align: center;
+	font-size: 25px;
+	height: 360px;
+	width: 100%;
+	margin: auto;
+}
+
+.contact_info p {
+	text-align: center;
+	font-size: 25px;
+	padding: 5px;
+}
+
+.contact_info h2 {
+	color: black;
+	font-size: 35px;
+	padding: 5px;
+}
+
+/* Makes the row width as wide as the content div */
+.row {
+	width: 100%;
+	margin: auto;
+	padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* Makes the two columns stack on top of each other instead of next to each other */
+/* Creates two equal columns that floats next to each other */
+@media screen and (max-width:600px) {
+	.column {
+		float: left;
+		width: 50%;
+		padding: 15px;
+	}
+}
+
+/* centers images that fall under a column */
+.column img {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 50%;
+	display: block;
+}
+
+
+
+
